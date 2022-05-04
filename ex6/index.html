@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em html </title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>tente abrir essa pagina em varios aparelhos diferentes ou 
+    simplesmente aumente e diminua a tela do navegador </p>
+    <picture>
+        <source media="(max-width:750px )" srcset="img/foto-P.png" type="image/png" >
+        <source media="(max-width:1050px)" srcset="img/foto-M.png" type="image/png">
+        <img src="img/foto-G.png" alt="imagem flexivel">
+    </picture>
+    <picture>
+        <source media="(min-width: 1050px)" srcset="img/foto-G.png" type="image/png">
+        <source media="(min-width:750px )" srcset="img/foto-M.png" type="image/png">
+        <img src="img/foto-P.png" alt="imagem flexivel">
+    </picture>
+    <h2>audios</h2>
+    <p>vamos aprender a reproduzir audios no html </p>
+    <audio src="midia/Michael Jackson - Smooth Criminal (Official Video)_160k.mp3" controls autoplay></audio>
+    <audio src="midia/Post Malone - rockstar ft. 21 Savage_160k.mp3" autoplay controls></audio>
+<!--para colocar varios formatos de audio num mesmo arquivo-->
+    <audio preload="metadata" controls><!--mp3 wav ogg-->
+        <source src="midia/Post Malone - rockstar ft. 21 Savage_160k.mp3" type="audio/mp3">
+        <source src="midia/Post Malone - rockstar ft. 21 Savage_160k.wav"type="audio/wav">
+        <source src="midia/Post Malone - rockstar ft. 21 Savage_160k.ogg" type="audio/ogg"> 
+    </audio>
+</body>
+</html>
